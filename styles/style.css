@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-primario: #000000;
+    --color-secundario: #F6F6F6;
+    --color-terciario: #22D4FD;
+    --color-cuartenario: #272727;
+
+
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+
+    --fuente-titulo: 2.25rem;
+    --fuente-parrafo: 1.5rem;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    box-sizing: border-box; /*Esto lo hacemos para que se calculen mejor las alturas y anchuras*/
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+
+
+/*Estas son las clases del header*/
+
+.header{
+padding: 2% 0% 0% 15% ;
+}
+
+.header__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.header__menu__link{
+    font-family: var(--fuente-montserrat);
+    font-size: var(--fuente-parrafo);
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+
+}
+
+/*Estas son las clases del body*/
+
+
+.presentacion{
+    display: flex; /* Para centrar lo que hacemos es poner un flex y centrar tanto los items hijos cómo el contenido en el centro */
+    align-items: center; /* Ahora centramos de izquierda a derecha */
+    justify-content: space-between; /* y de arriba hacia abajo */
+    padding: 5% 15%;
+    gap: 82px;
+} 
+
+
+.presentacion__contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+.presentacion__contenido__titulo{
+    font-size: var(--fuente-titulo);
+    font-family: var(--fuente-krona);
+    margin-right: 20px;
+}
+
+.titulo-destacado{
+    color: var(--color-terciario);
+}
+
+
+.presentacion__contenido__parrafo{
+    font-size: var(--fuente-parrafo);
+    font-family: var(--fuente-montserrat);
+    margin-right: 20px;
+}
+
+.presentacion__img{
+    width: 50%;
+}
+
+.presentacion__botones{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.presentacion__botones__intro{
+    font-family: var(--fuente-krona);
+    font-size: var(--fuente-parrafo);
+    font-weight: 400;
+}
+.presentacion__botones__link{
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: var(--fuente-parrafo);
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color:var(--color-secundario);
+    font-family: var(--fuente-montserrat);   
+    border: 2px solid var(--color-terciario);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.presentacion__botones__link:hover{
+    background-color: var(--color-cuartenario);
+}
+
+/*Aqui empieza el Footer*/  
+
+.footer{
+    background-color: var(--color-terciario);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-montserrat);    
+    font-size: var(--fuente-parrafo);
+}
+
+/* Aqui empiezan las media-queries */
+
+@media (max-width: 1200px) {
+    .presentacion {
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding: 5%;
+        gap: 40px;
+        margin: 20px 0
+        
+    }
+    
+    .presentacion__contenido{   
+        width: auto;
+    }
+
+    .presentacion__contenido__titulo{
+        margin: 0;
+    }
+
+    .presentacion__img{
+        width: 60%;
+    }
+
+    .presentacion__contenido__parrafo{
+        margin: 0; 
+    }
+
+    .header {
+        padding: 5% 0;
+    }
+
+    .header__menu {
+        justify-content: center;
+        gap: 20%;
+        
+    }
+}
